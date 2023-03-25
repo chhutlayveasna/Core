@@ -7,5 +7,8 @@ namespace Core.API.Data
         public ApplicationDbContext(DbContextOptions options): base(options)
         {
         }
+
+        public DbSet<Hotel> Hotels { get; set; }
+        public DbSet<Country> Countries { get; set; }
     }
 }
