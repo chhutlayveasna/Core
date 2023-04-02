@@ -1,3 +1,4 @@
+using Core.API.Configurations;
 using Core.API.Data;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
@@ -26,6 +27,9 @@ builder.Services.AddCors(options =>
 
 // Configure Serilog
 builder.Host.UseSerilog((ctx, lc) => lc.WriteTo.Console().ReadFrom.Configuration(ctx.Configuration));
+
+// Configure AutoMapper
+builder.Services.AddAutoMapper(typeof(MapperConfig));
 
 var app = builder.Build();
 
