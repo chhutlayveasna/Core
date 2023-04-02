@@ -13,8 +13,9 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace Core.API.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/v1/[controller]")]
+    [ApiVersion("1.0")]
     [Authorize]
     public class CountriesController : ControllerBase
     {
