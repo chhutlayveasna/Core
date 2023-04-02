@@ -2,6 +2,7 @@
 using Core.API.Data;
 using Core.API.Models.Country;
 using Core.API.Models.Hotels;
+using Core.API.Models.Users;
 
 namespace Core.API.Configurations
 {
@@ -16,6 +17,8 @@ namespace Core.API.Configurations
 
             CreateMap<Hotel, HotelDto>().ReverseMap();
             CreateMap<Hotel, CreateHotelDto>().ReverseMap();
+
+            CreateMap<ApiUserDto, ApiUser>().ReverseMap();
         }
     }
 }

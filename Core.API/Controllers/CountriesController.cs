@@ -9,11 +9,13 @@ using Core.API.Data;
 using Core.API.Models.Country;
 using AutoMapper;
 using Core.API.Contracts;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Core.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class CountriesController : ControllerBase
     {
         private readonly IMapper _mapper;
