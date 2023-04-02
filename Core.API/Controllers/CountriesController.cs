@@ -29,6 +29,7 @@ namespace Core.API.Controllers
 
         // GET: api/Countries
         [HttpGet]
+        [AllowAnonymous]
         public async Task<ActionResult<IEnumerable<GetCountryDto>>> GetCountries()
         {
             var countries = await _countriesRepository.GetAllAsync();
